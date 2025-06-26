@@ -1,1 +1,2 @@
-THIS REPO CONTAIN SHELL BASICS
+# System Engineering Dev0ps
+This repository contains shell script tasks for ALX Software Engineering program.

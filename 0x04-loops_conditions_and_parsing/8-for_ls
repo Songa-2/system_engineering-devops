@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-# Lists non-hidden files, printing only the part after the first dash
+# Lists files in current directory, prints part after first dash if present, otherwise prints full name
 
 for file in *; do
-  # Skip directories and hidden files
-  if [[ -f "$file" && "$file" == *-* ]]; then
-    echo "${file#*-}"
+  # Skip hidden files and directories
+  if [[ -f "$file" ]]; then
+    if [[ "$file" == *-* ]]; then
+      echo "${file#*-}"
+    else
+      echo "$file"
+    fi
   fi
 done
